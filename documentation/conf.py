@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Avans: DepthAI Demostrator'
+project = 'Avans: WSL Handleiding voor ROS'
 copyright = 'Avans ATIx: Gerard Harkema'
 author = 'Gerard Harkema'
 release = '0.1'

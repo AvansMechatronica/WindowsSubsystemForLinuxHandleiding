@@ -6,7 +6,12 @@
 Welcome to Avans: Windows Subsystem for Linux Handleiding
 ==========================================================
 
-**Avans: Windows Subsystem for Linux Handleiding** is een handleinding voor gebruikers die gebruik willen maken ...
+**Avans: Windows Subsystem for Linux Handleiding** 
+Dit is een handleinding voor gebruikers die gebruik willen maken een voorbereide WSL-distributie voor ROS.
+De volgende ROS platformen worden ondersteund:
++ ROS1 Melodic
++ ROS2 Humble
++ ROS2 Jazzy
 
 .. note::
    This project is under active development.
