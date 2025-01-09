@@ -20,6 +20,7 @@ Volg de volgende handelingen om WSL in Windows beschikbaar te maken
     * Windows Subsystem for Linux
 
 ![image](../images/WindowsFeatures.png)
+
 ## Installatie Visual Studio Code(VSC)
 Volg de volgende handelingen om Visual Studio Code te installeren
 * [Download VSC](https://code.visualstudio.com/download)
@@ -57,21 +58,21 @@ Volg de volgende handelingen om Visual Studio Code te installeren
     * Ubuntu 24.04 met ROS-Fuzzy integratie
 
 ### Ubuntu 18.04 met ROS-Melodic integratie
-* Download het Ubuntu-18.04-AvansRosMelodic.tar bestand op een voor jou bekende plaats (&lt;jou locatie&gt;).
+* Download het Ubuntu-18.04-AvansRosMelodic.tar bestand op een voor jou bekende plaats (**&lt;jou locatie&gt;**).
 * Start “PowerShell” (start-menu via Windows Start)
 * Voor het volgende commando uit in Powershell
 ``` bash
 wsl --import Ubuntu-18.04-AvansRosMelodic <drive>:/Ubuntu-18.04-AvansRosMelodic <jou locatie>/Ubuntu-18.04-AvansRosMelodic.tar
 ```
 ### Ubuntu 22.04 met ROS-Humble integratie
-* Download het Ubuntu-22.04-AvansRosHumble.tar bestand op een voor jou bekende plaats (<jou locatie>).
+* Download het Ubuntu-22.04-AvansRosHumble.tar bestand op een voor jou bekende plaats (**&lt;jou locatie&gt;**).
 * Voor het volgende commando uit in Powershell
 ```bash
 wsl --import Ubuntu-22.04-AvansRosHumble <drive>:/Ubuntu-22.04-AvansRosHumble <jou locatie>/Ubuntu-22.04-AvansRosHumble.tar
 ```
 *	Voor grote projecten is deze integratie ook beschikbaar in Docker. Zie: [Github link](https://github.com/AvansMechatronica/ROS2HumbleDevcontainer)
 ### Ubuntu 24.04 met ROS-Jazzy integratie
-* Download het Ubuntu-24.04-AvansRosJazzy.tar bestand op een voor jou bekende plaats (<jou locatie>).
+* Download het Ubuntu-24.04-AvansRosJazzy.tar bestand op een voor jou bekende plaats (**&lt;jou locatie&gt;**).
 * Voor het volgende commando uit in Powershell
 ```bash
 wsl --import Ubuntu-14.04-AvansRosJazzy <drive>:/Ubuntu-24.04-AvansRosJazzy <jou locatie>/Ubuntu-24.04-AvansRosJazzy.tar
