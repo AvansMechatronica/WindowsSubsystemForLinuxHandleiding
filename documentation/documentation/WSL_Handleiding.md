@@ -1,7 +1,7 @@
 # Windows Subsystem for Lunix(WSL) Handleiding
 
 ## Introductie
-Dit handleinding beschrijft hoe je Linux/Ubuntu applicaties kunt ontwikkelen in Windows met gebruik van het Windows Subsystem for Linux(WSL) en Visual Code. Dit is een alternatieve werkwijze voor het gebruik van Docker. 
+Dit Handleiding beschrijft hoe je Linux/Ubuntu applicaties kunt ontwikkelen in Windows met gebruik van het Windows Subsystem for Linux(WSL) en Visual Code. Dit is een alternatieve werkwijze voor het gebruik van Docker. 
 
 Er worden een aantal scenario’s beschreven:
 * Ubuntu 18/20/22/24 WSL-native (dus zonder toegevoegde applicaties)
