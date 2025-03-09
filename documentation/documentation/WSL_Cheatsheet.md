@@ -1,4 +1,4 @@
-## WSL Cheatsheat
+# WSL Cheatsheat
 
 ## wsl Help
 ```powershell
