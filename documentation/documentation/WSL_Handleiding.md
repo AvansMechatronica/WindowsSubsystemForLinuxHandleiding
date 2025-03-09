@@ -148,7 +148,7 @@ Referenties
 Op de volgende websites kun je meer informatie vinden
 * [VSC](https://code.visualstudio.com/)
 * [WSL 1](https://learn.microsoft.com/en-us/windows/wsl/install)
- * [WSL 1](https://learn.microsoft.com/nl-nl/windows/wsl/about)
+* [WSL 1](https://learn.microsoft.com/nl-nl/windows/wsl/about)
 * [WSL-Cheat sheet](./WSL_Cheatsheat.md)
 * [Ubuntu](https://ubuntu.com/desktop/wsl)
  
