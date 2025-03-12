@@ -57,27 +57,44 @@ Volg de volgende handelingen om Visual Studio Code te installeren
     * Ubuntu 22.04 met ROS-Humble integratie
     * Ubuntu 24.04 met ROS-Fuzzy integratie
 
-### Ubuntu 18.04 met ROS-Melodic integratie
+
+::::{tab-set}
+
+:::{tab-item} ROS-Melodic
+
+*Ubuntu 18.04 met ROS-Melodic integratie*
 * Download het Ubuntu-18.04-AvansRosMelodic.tar bestand op een voor jou bekende plaats (**&lt;jou locatie&gt;**).
 * Start “PowerShell” (start-menu via Windows Start)
 * Voor het volgende commando uit in Powershell
 ``` bash
 wsl --import Ubuntu-18.04-AvansRosMelodic <drive>:/Ubuntu-18.04-AvansRosMelodic <jou locatie>/Ubuntu-18.04-AvansRosMelodic.tar
 ```
-### Ubuntu 22.04 met ROS-Humble integratie
+:::
+
+:::{tab-item} ROS-Humble
+
+*Ubuntu 22.04 met ROS-Humble integratie*
 * Download het Ubuntu-22.04-AvansRosHumble.tar bestand op een voor jou bekende plaats (**&lt;jou locatie&gt;**).
 * Voor het volgende commando uit in Powershell
 ```bash
 wsl --import Ubuntu-22.04-AvansRosHumble <drive>:/Ubuntu-22.04-AvansRosHumble <jou locatie>/Ubuntu-22.04-AvansRosHumble.tar
 ```
 *	Voor grote projecten is deze integratie ook beschikbaar in Docker. Zie: [Github link](https://github.com/AvansMechatronica/ROS2HumbleDevcontainer)
-### Ubuntu 24.04 met ROS-Jazzy integratie
+:::
+
+:::{tab-item} ROS-Jazzy
+*Ubuntu 24.04 met ROS-Jazzy integratie*
 * Download het Ubuntu-24.04-AvansRosJazzy.tar bestand op een voor jou bekende plaats (**&lt;jou locatie&gt;**).
 * Voor het volgende commando uit in Powershell
 ```bash
 wsl --import Ubuntu-14.04-AvansRosJazzy <drive>:/Ubuntu-24.04-AvansRosJazzy <jou locatie>/Ubuntu-24.04-AvansRosJazzy.tar
 ```
 * Voor grote projecten is deze integratie ook beschikbaar in Docker. Zie: [Github link](https://github.com/AvansMechatronica/ROS2JazzyDevcontainer.git)
+:::
+
+::::
+
+
 
 
 ## Starten WSL Distributie(eerste keer)

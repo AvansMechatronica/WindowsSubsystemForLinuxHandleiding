@@ -24,9 +24,11 @@ language = 'nl'
 
 extensions = [
     'myst_parser',
-    'sphinx_copybutton'
+    'sphinx_copybutton',
+    'sphinx_design'
 ]
 
+myst_enable_extensions = ["html_admonition", "html_image", "colon_fence"]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
