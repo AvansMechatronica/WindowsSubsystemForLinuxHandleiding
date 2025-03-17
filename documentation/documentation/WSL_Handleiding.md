@@ -24,7 +24,7 @@ Volg de volgende handelingen om WSL in Windows beschikbaar te maken
 ## Installatie Visual Studio Code(VSC)
 Volg de volgende handelingen om Visual Studio Code te installeren
 * [Download VSC](https://code.visualstudio.com/download)
-*   Installeer VSC door de gedownloade executable (t VSCodeUserSetup-x64-x.xx.x .exe) te starten
+* Installeer VSC door de gedownloade executable (t VSCodeUserSetup-x64-x.xx.x .exe) te starten
 * Op de installatie het VSC programma
 
 ![image](../images/VisualCodeIcon.png)
@@ -39,6 +39,7 @@ Volg de volgende handelingen om Visual Studio Code te installeren
 
 ![image](../images/WslSelect.png)
 * Sluit VSC af
+
 
 
 ## Verkrijgen WSL distributie
@@ -57,6 +58,7 @@ Volg de volgende handelingen om Visual Studio Code te installeren
     * Ubuntu 22.04 met ROS-Humble integratie
     * Ubuntu 24.04 met ROS-Fuzzy integratie
 
+:::::{card}
 
 ::::{tab-set}
 
@@ -94,7 +96,7 @@ wsl --import Ubuntu-14.04-AvansRosJazzy <drive>:/Ubuntu-24.04-AvansRosJazzy <jou
 
 ::::
 
-
+:::::
 
 
 ## Starten WSL Distributie(eerste keer)
