@@ -174,6 +174,9 @@ Op de volgende websites kun je meer informatie vinden
 ## Overige opmerkingen/Aandachtspunten
 ### Platform IO
 Platform IO kan worden toegevoegd  worden VSC. Ga daarvoor naar de VSC marketplace(extentions) en zoek op PlatformIO
+
+{octicon}`alert;2em;sd-text-info` Wel dient eerst in VSC een wsl distributie te hebben gestart
+
 * Het installeren en het voor de eerste keer openen van en PlatformIO project neemt enige tijd in beslag, heb geduld. Wanneer het e.a. goed is opgestart blijkt daarna het e.a. op normale “snelheid” te lopen.
 
 ### Activeren mirrored network mode(!!!nog niet getest!!!)
