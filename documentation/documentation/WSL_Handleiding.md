@@ -176,7 +176,7 @@ Op de volgende websites kun je meer informatie vinden
 Platform IO kan worden toegevoegd  worden VSC. Ga daarvoor naar de VSC marketplace(extentions) en zoek op PlatformIO
 * Het installeren en het voor de eerste keer openen van en PlatformIO project neemt enige tijd in beslag, heb geduld. Wanneer het e.a. goed is opgestart blijkt daarna het e.a. op normale “snelheid” te lopen.
 
-### Activeren mirrord network mode(!!!nog niet getest!!!)
+### Activeren mirrored network mode(!!!nog niet getest!!!)
 *Op machines met **Windows 11 22H2 en hoger** kun je networkingMode=mirrored instellen onder [wsl2] in het .wslconfig bestand om gespiegelde netwerkmodus in te schakelen. Door dit in te schakelen verandert WSL naar een geheel nieuwe netwerkarchitectuur die als doel heeft de netwerkinterfaces die je onder Windows hebt te 'spiegelen' in Linux, om nieuwe netwerkfuncties toe te voegen en de compatibiliteit te verbeteren.*
 
 #### Testen versie van windows
