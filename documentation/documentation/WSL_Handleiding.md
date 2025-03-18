@@ -176,3 +176,27 @@ Op de volgende websites kun je meer informatie vinden
 Platform IO kan worden toegevoegd  worden VSC. Ga daarvoor naar de VSC marketplace(extentions) en zoek op PlatformIO
 * Het installeren en het voor de eerste keer openen van en PlatformIO project neemt enige tijd in beslag, heb geduld. Wanneer het e.a. goed is opgestart blijkt daarna het e.a. op normale “snelheid” te lopen.
 
+### Activeren mirrord network mode(under test)
+
+Start notepad met het run comando in windows:
+
+*Bevestig als er gevraagd wordt voor het maken van een nieuw bestand*
+
+```cmd
+notepad %userprofile%\.wslconfig
+```
+Kopieëer onderstaande tekst in Notepad en sla het bestand op.
+
+```txt
+[wsl2]
+networkingMode=mirrored
+```
+*let op: als het bestand al bestaat voeg dan alleen de regel *networkingMode=mirrored* toe onder de tag *[wsl2]*
+
+Beëindig het alle distributies van wsl (in een Powershell):
+```powershell
+wsl --shutdown
+```
+
+Sluit tevens Visual Code af, als deze geopend is.
+* Wacht minimaal 8 seconden voor je WSL start vanuit powershell of Visual Code.
