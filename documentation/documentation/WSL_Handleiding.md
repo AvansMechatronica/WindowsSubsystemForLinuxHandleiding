@@ -168,7 +168,7 @@ Op de volgende websites kun je meer informatie vinden
 * [VSC](https://code.visualstudio.com/)
 * [WSL 1](https://learn.microsoft.com/en-us/windows/wsl/install)
 * [WSL 1](https://learn.microsoft.com/nl-nl/windows/wsl/about)
-* [WSL-Cheat sheet](./WSL_Cheatsheat.md)
+* [WSL-Cheat sheet](./WSL_Cheatsheet.md)
 * [Ubuntu](https://ubuntu.com/desktop/wsl)
  
 ## Overige opmerkingen/Aandachtspunten
@@ -177,29 +177,29 @@ Platform IO kan worden toegevoegd  worden VSC. Ga daarvoor naar de VSC marketpla
 * Het installeren en het voor de eerste keer openen van en PlatformIO project neemt enige tijd in beslag, heb geduld. Wanneer het e.a. goed is opgestart blijkt daarna het e.a. op normale “snelheid” te lopen.
 
 ### Activeren mirrord network mode(under test)
-*Op machines met ** **Windows 11 22H2 en hoger** kun je networkingMode=mirrored instellen onder [wsl2] in het .wslconfig bestand om gespiegelde netwerkmodus in te schakelen. Door dit in te schakelen verandert WSL naar een geheel nieuwe netwerkarchitectuur die als doel heeft de netwerkinterfaces die je onder Windows hebt te 'spiegelen' in Linux, om nieuwe netwerkfuncties toe te voegen en de compatibiliteit te verbeteren.*
+*Op machines met **Windows 11 22H2 en hoger** kun je networkingMode=mirrored instellen onder [wsl2] in het .wslconfig bestand om gespiegelde netwerkmodus in te schakelen. Door dit in te schakelen verandert WSL naar een geheel nieuwe netwerkarchitectuur die als doel heeft de netwerkinterfaces die je onder Windows hebt te 'spiegelen' in Linux, om nieuwe netwerkfuncties toe te voegen en de compatibiliteit te verbeteren.*
 
 
 Start notepad met het run commando in windows:
 
 *Bevestig als er gevraagd wordt voor het maken van een nieuw bestand*
 
-```cmd
+```doscon
 notepad %userprofile%\.wslconfig
 ```
 Kopieëer onderstaande tekst in Notepad en sla het bestand op.
 
-```txt
+```text
 [wsl2]
 networkingMode=mirrored
 ```
-*let op: als het bestand al bestaat voeg dan alleen de regel *networkingMode=mirrored* toe onder de tag *[wsl2]*
+{octicon}`alert;2em;sd-text-info` Als het bestand al bestaat voeg dan alleen de regel *networkingMode=mirrored* toe onder de tag *[wsl2]*
 
-Beëindig het alle distributies van wsl (in een Powershell):
+Beëindig alle distributies van wsl (in een Powershell):
 
 ```powershell
 wsl --shutdown
 ```
 
 Sluit tevens Visual Code af, als deze geopend is.
-* Wacht minimaal 8 seconden voor je WSL start vanuit powershell of Visual Code.
+* Wacht minimaal 8 seconden voor je WSL start(vanuit powershell) of Visual Code.
