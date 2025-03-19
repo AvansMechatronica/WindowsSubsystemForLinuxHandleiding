@@ -1,0 +1,285 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="nl" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WSL Cheatsheet &mdash; Avans: WSL Handleiding voor ROS 0.1 documentatie</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a57088fb"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=e4d38c6a"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="prev" title="Windows Subsystem for Lunix(WSL) Handleiding" href="WSL_Handleiding.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Avans: WSL Handleiding voor ROS
+              <img src="../_static/avans-hogeschool.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Zoek in documentatie" aria-label="Zoek in documentatie" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigatiemenu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="WSL_Handleiding.html">Windows Subsystem for Lunix(WSL) Handleiding</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">WSL Cheatsheet</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#wsl-help">wsl Help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#check-wsl-status">Check WSL status</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#check-wsl-version">Check WSL version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#update-wsl">Update WSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-list-installed-distributions">To list installed distributions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#see-a-list-of-the-linux-distributions-available-through-the-online-store">See a list of the Linux distributions available through the online store</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-list-installed-distributions-along-with-its-running-status-and-wsl-config-being-1-or-2">To list installed distributions along with its running status and wsl config being 1 or 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-default-wsl-version">Set default WSL version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-run-a-specific-distro">To run a specific distro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-terminate-shutdown-a-specific-distro">To terminate/shutdown a specific distro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-shutdown-all-disstros">To shutdown all disstros</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#set-specific-distro-as-default">Set specific distro as default</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-export-a-running-distro-as-image">To EXPORT a running distro as image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-export-a-running-distro-as-image-in-vhd-format">To EXPORT a running distro as image in vhd format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-import-an-image-as-distro">To IMPORT an image as distro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-unregister-a-distro">To UNREGISTER a distro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-run-a-wsl-distro-as-the-specified-user">To run a WSL distro as the specified user.</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#to-change-the-default-user-for-a-distribution">To change the default user for a distribution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#identify-ip-address-of-your-linux-distribution-installed-via-wsl-2">Identify IP address of your Linux distribution installed via WSL 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#identify-ip-address-of-the-windows-machine-as-seen-from-wsl-2">Identify IP address of the Windows machine as seen from WSL 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-deprecated-wsl-commands">List of deprecated WSL Commands</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Navigatiemenu voor mobiel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Avans: WSL Handleiding voor ROS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Paginanavigatie">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">WSL Cheatsheet</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentation/WSL_Cheatsheet.md.txt" rel="nofollow"> Bekijk paginabron</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="wsl-cheatsheet">
+<h1>WSL Cheatsheet<a class="headerlink" href="#wsl-cheatsheet" title="Link to this heading"></a></h1>
+<section id="wsl-help">
+<h2>wsl Help<a class="headerlink" href="#wsl-help" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="p">-</span><span class="n">-help</span>
+</pre></div>
+</div>
+</section>
+<section id="check-wsl-status">
+<h2>Check WSL status<a class="headerlink" href="#check-wsl-status" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="p">-</span><span class="n">-status</span>
+</pre></div>
+</div>
+</section>
+<section id="check-wsl-version">
+<h2>Check WSL version<a class="headerlink" href="#check-wsl-version" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="p">-</span><span class="n">-version</span>
+</pre></div>
+</div>
+</section>
+<section id="update-wsl">
+<h2>Update WSL<a class="headerlink" href="#update-wsl" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="p">-</span><span class="n">-update</span>
+</pre></div>
+</div>
+</section>
+<section id="to-list-installed-distributions">
+<h2>To list installed distributions<a class="headerlink" href="#to-list-installed-distributions" title="Link to this heading"></a></h2>
+<p>(The default version of distro is explicitly mentioned in paranthesis)</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="n">-l</span>
+<span class="n">wsl</span> <span class="p">-</span><span class="n">-list</span>
+</pre></div>
+</div>
+</section>
+<section id="see-a-list-of-the-linux-distributions-available-through-the-online-store">
+<h2>See a list of the Linux distributions available through the online store<a class="headerlink" href="#see-a-list-of-the-linux-distributions-available-through-the-online-store" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="n">-l</span> <span class="n">-o</span>
+<span class="n">wsl</span> <span class="p">-</span><span class="n">-list</span> <span class="p">-</span><span class="n">-online</span>
+</pre></div>
+</div>
+</section>
+<section id="to-list-installed-distributions-along-with-its-running-status-and-wsl-config-being-1-or-2">
+<h2>To list installed distributions along with its running status and wsl config being 1 or 2<a class="headerlink" href="#to-list-installed-distributions-along-with-its-running-status-and-wsl-config-being-1-or-2" title="Link to this heading"></a></h2>
+<p>The default version of distro is explicitly marked with prefix <code class="docutils literal notranslate"><span class="pre">*</span></code> before its name</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="n">-l</span> <span class="p">-</span><span class="n">-verbose</span>
+<span class="n">wsl</span> <span class="n">-l</span> <span class="n">-v</span>
+</pre></div>
+</div>
+</section>
+<section id="set-default-wsl-version">
+<h2>Set default WSL version<a class="headerlink" href="#set-default-wsl-version" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="p">-</span><span class="n">-set-default-version</span> <span class="p">&lt;</span><span class="n">Version</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</section>
+<section id="to-run-a-specific-distro">
+<h2>To run a specific distro<a class="headerlink" href="#to-run-a-specific-distro" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="n">-d</span> <span class="n">distro_name</span>
+<span class="n">wsl</span> <span class="p">-</span><span class="n">-distribution</span> <span class="n">distro_name</span>
+</pre></div>
+</div>
+</section>
+<section id="to-terminate-shutdown-a-specific-distro">
+<h2>To terminate/shutdown a specific distro<a class="headerlink" href="#to-terminate-shutdown-a-specific-distro" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="n">-t</span> <span class="n">distro_name_to_shutdown</span>
+<span class="n">wsl</span> <span class="p">-</span><span class="n">-terminate</span> <span class="n">distro_name_to_shutdown</span>
+</pre></div>
+</div>
+</section>
+<section id="to-shutdown-all-disstros">
+<h2>To shutdown all disstros<a class="headerlink" href="#to-shutdown-all-disstros" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="p">-</span><span class="n">-shutdown</span>
+</pre></div>
+</div>
+</section>
+<section id="set-specific-distro-as-default">
+<h2>Set specific distro as default<a class="headerlink" href="#set-specific-distro-as-default" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="n">-s</span> <span class="n">my_default_distro</span>
+<span class="n">wsl</span> <span class="p">-</span><span class="n">-set-default</span> <span class="n">my_default_distro</span>
+</pre></div>
+</div>
+</section>
+<section id="to-export-a-running-distro-as-image">
+<h2>To EXPORT a running distro as image<a class="headerlink" href="#to-export-a-running-distro-as-image" title="Link to this heading"></a></h2>
+<p>(Defaults to tar format)</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="p">-</span><span class="n">-export</span> <span class="n">distro_name_to_export</span> <span class="n">windows_path</span><span class="p">\</span><span class="n">tar_file_name</span><span class="p">.</span><span class="n">tar</span>
+</pre></div>
+</div>
+</section>
+<section id="to-export-a-running-distro-as-image-in-vhd-format">
+<h2>To EXPORT a running distro as image in vhd format<a class="headerlink" href="#to-export-a-running-distro-as-image-in-vhd-format" title="Link to this heading"></a></h2>
+<p>(only supported using WSL 2)</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="p">-</span><span class="n">-export</span> <span class="n">distro_name_to_export</span> <span class="p">-</span><span class="n">-vhd</span> <span class="n">windows_path</span><span class="p">\</span><span class="n">tar_file_name</span><span class="p">.</span><span class="n">vhd</span>
+</pre></div>
+</div>
+</section>
+<section id="to-import-an-image-as-distro">
+<h2>To IMPORT an image as distro<a class="headerlink" href="#to-import-an-image-as-distro" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="p">-</span><span class="n">-import</span> <span class="n">new_distro_name</span> <span class="n">install_location_windows_path</span> <span class="n">tar_file_name</span><span class="p">.</span><span class="n">tar</span> <span class="p">-</span><span class="n">-version</span> <span class="n">wsl-version</span><span class="p">-</span><span class="n">1</span><span class="o">-or</span><span class="p">-</span><span class="n">2</span>
+<span class="n">wsl</span> <span class="p">-</span><span class="n">-import</span> <span class="n">Ubuntu</span><span class="p">-</span><span class="n">20</span> <span class="n">D</span><span class="p">:\</span><span class="n">VMs</span><span class="p">\</span><span class="n">WSL</span><span class="p">\</span><span class="n">Ubuntu</span><span class="p">-</span><span class="n">20</span><span class="p">\</span> <span class="n">Ubuntu</span><span class="p">-</span><span class="n">20</span><span class="p">.</span><span class="n">04</span><span class="p">.</span><span class="n">tar</span> <span class="p">-</span><span class="n">-version</span> <span class="n">2</span> <span class="c">## Setting my secondary HDD as storate loc for new distro</span>
+<span class="n">wsl</span> <span class="p">-</span><span class="n">-import</span> <span class="n">Ubuntu</span><span class="p">-</span><span class="n">20</span> <span class="p">-</span><span class="n">-vhd</span> <span class="n">D</span><span class="p">:\</span><span class="n">VMs</span><span class="p">\</span><span class="n">WSL</span><span class="p">\</span><span class="n">Ubuntu</span><span class="p">-</span><span class="n">20</span><span class="p">\</span> <span class="n">Ubuntu</span><span class="p">-</span><span class="n">20</span><span class="p">.</span><span class="n">04</span><span class="p">.</span><span class="n">vhd</span> <span class="p">-</span><span class="n">-version</span> <span class="n">2</span> <span class="c">## Importing distro in vhd format</span>
+</pre></div>
+</div>
+</section>
+<section id="to-unregister-a-distro">
+<h2>To UNREGISTER a distro<a class="headerlink" href="#to-unregister-a-distro" title="Link to this heading"></a></h2>
+<p>(also removes the its file storage)</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="p">-</span><span class="n">-unregister</span> <span class="n">distro_name_that_delete</span>
+</pre></div>
+</div>
+</section>
+<section id="to-run-a-wsl-distro-as-the-specified-user">
+<h2>To run a WSL distro as the specified user.<a class="headerlink" href="#to-run-a-wsl-distro-as-the-specified-user" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="n">-u</span> <span class="n">username</span> <span class="n">-d</span> <span class="n">distroname</span>
+<span class="n">wsl</span> <span class="n">-u</span> <span class="n">root</span> <span class="n">-d</span> <span class="n">Ubuntu</span><span class="p">-</span><span class="n">20</span><span class="p">.</span><span class="n">04</span>
+</pre></div>
+</div>
+</section>
+<section id="to-change-the-default-user-for-a-distribution">
+<h2>To change the default user for a distribution<a class="headerlink" href="#to-change-the-default-user-for-a-distribution" title="Link to this heading"></a></h2>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">DistributionName</span> <span class="n">config</span> <span class="p">-</span><span class="n">-default-user</span> <span class="n">Username</span>
+<span class="n">ubuntu</span> <span class="n">config</span> <span class="p">-</span><span class="n">-default-user</span> <span class="n">my_default_username</span>
+<span class="n">ubuntu2004</span><span class="p">.</span><span class="n">exe</span> <span class="n">config</span> <span class="p">-</span><span class="n">-default-user</span> <span class="n">johndoe</span> <span class="c">## When you have Ubuntu 20.04 version installed from the Microsoft Store</span>
+</pre></div>
+</div>
+</section>
+<section id="identify-ip-address-of-your-linux-distribution-installed-via-wsl-2">
+<h2>Identify IP address of your Linux distribution installed via WSL 2<a class="headerlink" href="#identify-ip-address-of-your-linux-distribution-installed-via-wsl-2" title="Link to this heading"></a></h2>
+<p>(the WSL 2 VM address)</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="n">hostname</span> <span class="n">-I</span>
+</pre></div>
+</div>
+</section>
+<section id="identify-ip-address-of-the-windows-machine-as-seen-from-wsl-2">
+<h2>Identify IP address of the Windows machine as seen from WSL 2<a class="headerlink" href="#identify-ip-address-of-the-windows-machine-as-seen-from-wsl-2" title="Link to this heading"></a></h2>
+<p>(the WSL 2 VM)</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">ip</span> <span class="n">route</span> <span class="n">show</span> <span class="p">|</span> <span class="n">grep</span> <span class="n">-i</span> <span class="k">default</span> <span class="p">|</span> <span class="n">awk</span> <span class="s1">&#39;{ print $3}&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="list-of-deprecated-wsl-commands">
+<h2>List of deprecated WSL Commands<a class="headerlink" href="#list-of-deprecated-wsl-commands" title="Link to this heading"></a></h2>
+<p>These commands were the original wsl syntax for configuring Linux distributions installed with WSL, but have been replaced with the wsl or wsl.exe command syntax.</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wslconfig</span><span class="p">.</span><span class="n">exe</span> <span class="no">[Argument] [Options]</span>
+<span class="n">bash</span> <span class="no">[Options]</span>
+<span class="n">lxrun</span> <span class="p">/</span><span class="no">[Argument]</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Voettekst">
+        <a href="WSL_Handleiding.html" class="btn btn-neutral float-left" title="Windows Subsystem for Lunix(WSL) Handleiding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Vorige</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Avans ATIx: Gerard Harkema.</p>
+  </div>
+
+  Gebouwd met <a href="https://www.sphinx-doc.org/">Sphinx</a> met een
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thema</a>
+    geleverd door <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
