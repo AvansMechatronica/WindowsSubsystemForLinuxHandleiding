@@ -173,6 +173,13 @@ Op de volgende websites kun je meer informatie vinden
  
 ## Overige opmerkingen/Aandachtspunten
 ### Platform IO
+
+Installeer eerst een Python environment:
+```bash
+sudo apt update
+sudo apt install python3-venv
+```
+
 Platform IO kan worden toegevoegd  worden VSC. Ga daarvoor naar de VSC marketplace(extentions) en zoek op PlatformIO
 
 {octicon}`alert;2em;sd-text-info` Wel dient eerst in VSC een wsl distributie te hebben gestart
