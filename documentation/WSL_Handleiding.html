@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="nl" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Windows Subsystem for Lunix(WSL) Handleiding &mdash; Avans: WSL Handleiding voor ROS 0.1 documentatie</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a57088fb"></script>
+      <script src="../_static/doctools.js?v=9bcbadda"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/translations.js?v=e4d38c6a"></script>
+      <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Zoeken" href="../search.html" />
+    <link rel="next" title="WSL Cheatsheet" href="WSL_Cheatsheet.html" />
+    <link rel="prev" title="Welkom bij Avans: Windows Subsystem for Linux Handleiding" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Avans: WSL Handleiding voor ROS
+              <img src="../_static/avans-hogeschool.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Zoek in documentatie" aria-label="Zoek in documentatie" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigatiemenu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Windows Subsystem for Lunix(WSL) Handleiding</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introductie">Introductie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#voorbereiden-windows-voor-wsl">Voorbereiden Windows voor WSL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installatie-visual-studio-code-vsc">Installatie Visual Studio Code(VSC)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#verkrijgen-wsl-distributie">Verkrijgen WSL distributie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starten-wsl-distributie-eerste-keer">Starten WSL Distributie(eerste keer)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#starten-wsl-distributie-vanuit-visual-code">Starten WSL Distributie vanuit Visual Code</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#applicatie-ontwikkeling">Applicatie ontwikkeling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#koppelen-usb-devices-aan-wsl-distributie">Koppelen USB-devices aan WSL-Distributie</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#valkuilen">Valkuilen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#overige-opmerkingen-aandachtspunten">Overige opmerkingen/Aandachtspunten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#platform-io">Platform IO</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#activeren-mirrored-network-mode-nog-niet-getest">Activeren mirrored network mode(!!!nog niet getest!!!)</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#testen-versie-van-windows">Testen versie van windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#wsl-in-mirrord-network-mode-zetten">WSL in mirrord network mode zetten</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="WSL_Cheatsheet.html">WSL Cheatsheet</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Navigatiemenu voor mobiel" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Avans: WSL Handleiding voor ROS</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Paginanavigatie">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Windows Subsystem for Lunix(WSL) Handleiding</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/documentation/WSL_Handleiding.md.txt" rel="nofollow"> Bekijk paginabron</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="windows-subsystem-for-lunix-wsl-handleiding">
+<h1>Windows Subsystem for Lunix(WSL) Handleiding<a class="headerlink" href="#windows-subsystem-for-lunix-wsl-handleiding" title="Link to this heading"></a></h1>
+<section id="introductie">
+<h2>Introductie<a class="headerlink" href="#introductie" title="Link to this heading"></a></h2>
+<p>Dit Handleiding beschrijft hoe je Linux/Ubuntu applicaties kunt ontwikkelen in Windows met gebruik van het Windows Subsystem for Linux(WSL) en Visual Code. Dit is een alternatieve werkwijze voor het gebruik van Docker.</p>
+<p>Er worden een aantal scenario’s beschreven:</p>
+<ul class="simple">
+<li><p>Ubuntu 18/20/22/24 WSL-native (dus zonder toegevoegde applicaties)</p></li>
+<li><p>Ubuntu 18.04 met ROS-Melodic integratie</p></li>
+<li><p>Ubuntu 22.04 met ROS-Humble integratie</p></li>
+<li><p>Ubuntu 24.04 met ROS-Fuzzy integratie</p></li>
+</ul>
+<p><em>p.s. Voor meer complexe applicaties welke bestaan uit onderling communicerende nodes/processen/containers wordt aanbevolen om Docker(DevContainers) te gebruiken. Docker valt buiten de scope van dit document.</em></p>
+</section>
+<section id="voorbereiden-windows-voor-wsl">
+<h2>Voorbereiden Windows voor WSL<a class="headerlink" href="#voorbereiden-windows-voor-wsl" title="Link to this heading"></a></h2>
+<p>Volg de volgende handelingen om WSL in Windows beschikbaar te maken</p>
+<ol class="arabic simple">
+<li><p>Open in Windows het “Program and Features” control panel</p></li>
+<li><p>“Turn Windows features on or off” (rechter zijde control panel)</p></li>
+<li><p>Zet de volgende features aan:</p>
+<ul class="simple">
+<li><p>Windows PowerShell 2.0</p></li>
+<li><p>Windows Subsystem for Linux</p></li>
+</ul>
+</li>
+</ol>
+<p><img alt="image" src="../_images/WindowsFeatures.png" /></p>
+</section>
+<section id="installatie-visual-studio-code-vsc">
+<h2>Installatie Visual Studio Code(VSC)<a class="headerlink" href="#installatie-visual-studio-code-vsc" title="Link to this heading"></a></h2>
+<p>Volg de volgende handelingen om Visual Studio Code te installeren</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com/download">Download VSC</a></p></li>
+<li><p>Installeer VSC door de gedownloade executable (t VSCodeUserSetup-x64-x.xx.x .exe) te starten</p></li>
+<li><p>Op de installatie het VSC programma</p></li>
+</ul>
+<p><img alt="image" src="../_images/VisualCodeIcon.png" /></p>
+<ul class="simple">
+<li><p>Installer in VSC WSL support</p></li>
+<li><p>Open de Marketplace(extentions)</p></li>
+</ul>
+<p><img alt="image" src="../_images/MarketplaceIcon.png" /></p>
+<ul class="simple">
+<li><p>Selecteer WSL</p></li>
+</ul>
+<p><img alt="image" src="../_images/WslInstall.png" /></p>
+<ul class="simple">
+<li><p>Zorg ervoor dat in het linker paneel WSL geïnstalleerd is en ge-enabled</p></li>
+</ul>
+<p><img alt="image" src="../_images/WslSelect.png" /></p>
+<ul class="simple">
+<li><p>Sluit VSC af</p></li>
+</ul>
+</section>
+<section id="verkrijgen-wsl-distributie">
+<h2>Verkrijgen WSL distributie<a class="headerlink" href="#verkrijgen-wsl-distributie" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Ubuntu 18/20/22/24 WSL-native (dus zonder toegevoegde applicaties)</p>
+<ul>
+<li><p>Gebruik de “Microsoft Store” om je gewenste distributie te downloaden</p></li>
+<li><p>Ga naar “Apps”</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="image" src="../_images/MicrosoftStore.png" /></p>
+<ul class="simple">
+<li><p>Zoek op “Ubuntu”</p></li>
+<li><p>Selecteer jou gewenste versie van Ubuntu en klik op “Installeer”</p></li>
+<li><p>Vervolg “Starten WSL Distributie(eerste keer)”</p></li>
+<li><p>De volgend distributies zijn al voor bereid en kun je downloaden vanaf: <a class="reference external" href="https://avans.sharepoint.com/:f:/s/AEI-ROS-Robot-Operating-System0841/EkgcaYeGy_FGsrzQs9fWtX4BNBZvwPBGhUFpGZ8FiGwpQA?e=rLT7Fa">Download link</a></p>
+<ul>
+<li><p>Ubuntu 18.04 met ROS-Melodic integratie</p></li>
+<li><p>Ubuntu 22.04 met ROS-Humble integratie</p></li>
+<li><p>Ubuntu 24.04 met ROS-Fuzzy integratie</p></li>
+</ul>
+</li>
+</ul>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<div class="sd-tab-set docutils">
+<input checked="checked" id="sd-tab-item-0" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-0">
+ROS-Melodic</label><div class="sd-tab-content docutils">
+<p class="sd-card-text"><em>Ubuntu 18.04 met ROS-Melodic integratie</em></p>
+<ul class="simple">
+<li><p class="sd-card-text">Download het Ubuntu-18.04-AvansRosMelodic.tar bestand op een voor jou bekende plaats (<strong>&lt;jou locatie&gt;</strong>).</p></li>
+<li><p class="sd-card-text">Start “PowerShell” (start-menu via Windows Start)</p></li>
+<li><p class="sd-card-text">Voor het volgende commando uit in Powershell</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wsl<span class="w"> </span>--import<span class="w"> </span>Ubuntu-18.04-AvansRosMelodic<span class="w"> </span>&lt;drive&gt;:/Ubuntu-18.04-AvansRosMelodic<span class="w"> </span>&lt;jou<span class="w"> </span>locatie&gt;/Ubuntu-18.04-AvansRosMelodic.tar
+</pre></div>
+</div>
+</div>
+<input id="sd-tab-item-1" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-1">
+ROS-Humble</label><div class="sd-tab-content docutils">
+<p class="sd-card-text"><em>Ubuntu 22.04 met ROS-Humble integratie</em></p>
+<ul class="simple">
+<li><p class="sd-card-text">Download het Ubuntu-22.04-AvansRosHumble.tar bestand op een voor jou bekende plaats (<strong>&lt;jou locatie&gt;</strong>).</p></li>
+<li><p class="sd-card-text">Voor het volgende commando uit in Powershell</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wsl<span class="w"> </span>--import<span class="w"> </span>Ubuntu-22.04-AvansRosHumble<span class="w"> </span>&lt;drive&gt;:/Ubuntu-22.04-AvansRosHumble<span class="w"> </span>&lt;jou<span class="w"> </span>locatie&gt;/Ubuntu-22.04-AvansRosHumble.tar
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Voor grote projecten is deze integratie ook beschikbaar in Docker. Zie: <a class="reference external" href="https://github.com/AvansMechatronica/ROS2HumbleDevcontainer">Github link</a></p></li>
+</ul>
+</div>
+<input id="sd-tab-item-2" name="sd-tab-set-0" type="radio">
+<label class="sd-tab-label" for="sd-tab-item-2">
+ROS-Jazzy</label><div class="sd-tab-content docutils">
+<p class="sd-card-text"><em>Ubuntu 24.04 met ROS-Jazzy integratie</em></p>
+<ul class="simple">
+<li><p class="sd-card-text">Download het Ubuntu-24.04-AvansRosJazzy.tar bestand op een voor jou bekende plaats (<strong>&lt;jou locatie&gt;</strong>).</p></li>
+<li><p class="sd-card-text">Voor het volgende commando uit in Powershell</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>wsl<span class="w"> </span>--import<span class="w"> </span>Ubuntu-24.04-AvansRosJazzy<span class="w"> </span>&lt;drive&gt;:/Ubuntu-24.04-AvansRosJazzy<span class="w"> </span>&lt;jou<span class="w"> </span>locatie&gt;/Ubuntu-24.04-AvansRosJazzy.tar
+</pre></div>
+</div>
+<ul class="simple">
+<li><p class="sd-card-text">Voor grote projecten is deze integratie ook beschikbaar in Docker. Zie: <a class="reference external" href="https://github.com/AvansMechatronica/ROS2JazzyDevcontainer.git">Github link</a></p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="starten-wsl-distributie-eerste-keer">
+<h2>Starten WSL Distributie(eerste keer)<a class="headerlink" href="#starten-wsl-distributie-eerste-keer" title="Link to this heading"></a></h2>
+<p><em>Opmerking: Deze stap kan worden overgeslagen bij de voor geconfigureerde distributies van Avans</em></p>
+<ul class="simple">
+<li><p>Vanuit de “Microsoft Store” beweeg je je muis over de geïnstalleerde distributie</p></li>
+</ul>
+<p><img alt="image" src="../_images/MicrosoftStoreDetail.png" /></p>
+<ul class="simple">
+<li><p>Klik met je muis op Open/Openen</p></li>
+<li><p>Voer een gebruikersnaam(zelf bedacht, in kleine letters) in, wanneer daarom wordt gevraagd</p></li>
+<li><p>Voer een wachtwoord(2x) in wanneer daarom wordt gevraagd (onthoud dit wachtwoord).</p></li>
+<li><p>Wacht op de melding “Installation successful!”</p></li>
+<li><p>Sluit de terminal af met het “logout” commando.</p></li>
+</ul>
+</section>
+<section id="starten-wsl-distributie-vanuit-visual-code">
+<h2>Starten WSL Distributie vanuit Visual Code<a class="headerlink" href="#starten-wsl-distributie-vanuit-visual-code" title="Link to this heading"></a></h2>
+<p>Voer de volgende handelingen uit om de WSL-distributie te openen in Visual Studie Code om van daaruit je linux/applicatie te ontwikkelen</p>
+<ul class="simple">
+<li><p>Start VSC</p></li>
+<li><p>Open de Command Palette door de toets F1</p></li>
+<li><p>Type in de Command Pallette WSL</p></li>
+<li><p>Selecteer “WSL: Connect WSL using distro…” en selecteer jou geïnstalleerde WSL distributie</p></li>
+<li><p>Open een terminal</p>
+<ul>
+<li><p>Menu van VSC; TerminalNew Terminal</p></li>
+<li><p>Toet combinatie “Shift”+ “Ctrl” +”`”</p></li>
+<li><p><em>Opmerking: je kunt meerdere terminals gelijktijdig openen, een lijst van geopende terminals vind je aan de linker zijde van het terminal-paneel</em></p></li>
+</ul>
+</li>
+<li><p>Open de bestands verkenner</p>
+<ul>
+<li><p>Open het bestandsverkenner(Explorer) met het volgende icoon</p></li>
+</ul>
+</li>
+</ul>
+<p><img alt="image" src="../_images/VSCbestandsVerkenner.png" /></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>* Kies open Folder, select
+    * /home/student/
+    * /home/&lt;mijn gebruikersnaam&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>De layout van VSC ziet er dan als volgt uit</p></li>
+</ul>
+<p><img alt="image" src="../_images/VSClayout.png" /></p>
+<ul class="simple">
+<li><p>De volgende gegevens zijn van belang bij het inloggen van een voor geconfigureerde distributie</p>
+<ul>
+<li><p>Gebruikersnaam: student</p></li>
+<li><p>Wachtwoord: Geheim! (gebruik dit wachtwoord ook bij sudo opdrachten)</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="applicatie-ontwikkeling">
+<h2>Applicatie ontwikkeling<a class="headerlink" href="#applicatie-ontwikkeling" title="Link to this heading"></a></h2>
+<p>Je kunt nu applicaties in Python/C/C++/Java etc. ontwikkelen. Je dient echter wel in de distributie eerst  de juiste programma’s/compilers/bibliotheken daarvoor te installeren. Je kunt dit doen met het Linux “apt” commando of voor b.v. Python-bibliotheken met het “pip” of “pip3” commando.</p>
+</section>
+<section id="koppelen-usb-devices-aan-wsl-distributie">
+<h2>Koppelen USB-devices aan WSL-Distributie<a class="headerlink" href="#koppelen-usb-devices-aan-wsl-distributie" title="Link to this heading"></a></h2>
+<p>Als je USB devices wilt gebruiken in je WSL-distributie dan moeten deze worden “geforward” van windows naar WSL. Hiervoor is de grafische WSL-USB tool beschikbaar.
+Voer de volgende handelingen uit:</p>
+<ul class="simple">
+<li><p>Download het “WSL-USB-x.x.x.msi” bestand van <a class="reference external" href="https://gitlab.com/alelec/wsl-usb-gui/-/releases">Download link</a></p></li>
+<li><p>Installeer het WSL-USB programma met het gedownload bestand.</p></li>
+<li><p>Start het volgende programma</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>C:<span class="se">\P</span>rogram<span class="w"> </span>Files<span class="se">\W</span>SL<span class="w"> </span>USB<span class="se">\ </span>wsl-usb-gui.exe
+</pre></div>
+</div>
+<p><em>Opmerking: helaas is dit niet beschikbaar via het Windows start-menu(je kun wel een snelkoppeling maken naar je desktop)</em></p>
+<ul class="simple">
+<li><p>Volg de instructies op om een USB device te forwarden op de <a class="reference external" href="https://gitlab.com/alelec/wsl-usb-gui">website</a></p></li>
+<li><p>Afhankelijk van jou computer/Windows systeemconfiguratie kan meerdere malen gevraagd worden om je Windows gebruikersnaam en wachtwoord in te voeren</p></li>
+<li><p>Tip: Je kunt de connectie automatisch laten plaatvinden door de <strong>“Auto-Attach”</strong> functie</p></li>
+<li><p>Device: Het aangesloten type apparaat op één van de USB poorten wordt met WSL verbonden(Attach), dit is de meest geschikte wijze voor de meeste USB apparaten</p></li>
+<li><p>Port: Een willekeurig apparaat op een specifieke (fysieke)USB-poort wordt met WSL verbonden(Attach). Gebruik deze methode voor b.v. een OAK depthAI camera, maar houd er dan rekening mee dat deze camera dan altijd op dezelfde fysieke USB poort aangesloten dient te worden.</p></li>
+<li><p>Vergeet een apparaat of USB-poort te verbreken(Detach) als je het USB apparaat weer onder Windows wilt gebruiken.</p></li>
+<li><p>Let op: het e.a. kan niet goed werken als TCP port 3240 door de Firewall wordt geblokkeerd (zoek op internet naar een oplossing)</p></li>
+</ul>
+</section>
+<section id="valkuilen">
+<h2>Valkuilen<a class="headerlink" href="#valkuilen" title="Link to this heading"></a></h2>
+<p>De volgende valkuilen zijn bekend bij het gebruik van een WSL distributie</p>
+<ul class="simple">
+<li><p>Als je een distributie “unregister” met het “wsl –unregister” commando ben je al je bestanden/instellingen/geïnstalleerde programma’s kwijt die in de distributie zijn aangemaakt .</p></li>
+<li><p>Je kunt je bestanden in de distributie kopiëren met de VSC omgeving doormiddel van copy &amp; past. Beter is om een GIT-repository aan te maken/gebruiken voor je eigen bestanden</p></li>
+<li><p>Er volgen nog meer….</p></li>
+</ul>
+<p>Referenties
+Op de volgende websites kun je meer informatie vinden</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://code.visualstudio.com/">VSC</a></p></li>
+<li><p><a class="reference external" href="https://learn.microsoft.com/en-us/windows/wsl/install">WSL 1</a></p></li>
+<li><p><a class="reference external" href="https://learn.microsoft.com/nl-nl/windows/wsl/about">WSL 1</a></p></li>
+<li><p><a class="reference internal" href="WSL_Cheatsheet.html"><span class="std std-doc">WSL-Cheat sheet</span></a></p></li>
+<li><p><a class="reference external" href="https://ubuntu.com/desktop/wsl">Ubuntu</a></p></li>
+</ul>
+</section>
+<section id="overige-opmerkingen-aandachtspunten">
+<h2>Overige opmerkingen/Aandachtspunten<a class="headerlink" href="#overige-opmerkingen-aandachtspunten" title="Link to this heading"></a></h2>
+<section id="platform-io">
+<h3>Platform IO<a class="headerlink" href="#platform-io" title="Link to this heading"></a></h3>
+<p>Installeer eerst een Python environment:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-venv
+</pre></div>
+</div>
+<p>Platform IO kan worden toegevoegd  worden VSC. Ga daarvoor naar de VSC marketplace(extentions) en zoek op PlatformIO</p>
+<p><svg version="1.1" width="2.0em" height="2.0em" class="sd-octicon sd-octicon-alert sd-text-info" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"></path><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"></path></svg> Wel dient eerst in VSC een wsl distributie te hebben gestart</p>
+<ul class="simple">
+<li><p>Het installeren en het voor de eerste keer openen van en PlatformIO project neemt enige tijd in beslag, heb geduld. Wanneer het e.a. goed is opgestart blijkt daarna het e.a. op normale “snelheid” te lopen.</p></li>
+</ul>
+</section>
+<section id="activeren-mirrored-network-mode-nog-niet-getest">
+<h3>Activeren mirrored network mode(!!!nog niet getest!!!)<a class="headerlink" href="#activeren-mirrored-network-mode-nog-niet-getest" title="Link to this heading"></a></h3>
+<p><em>Op machines met <strong>Windows 11 22H2 en hoger</strong> kun je networkingMode=mirrored instellen onder [wsl2] in het .wslconfig bestand om gespiegelde netwerkmodus in te schakelen. Door dit in te schakelen verandert WSL naar een geheel nieuwe netwerkarchitectuur die als doel heeft de netwerkinterfaces die je onder Windows hebt te ‘spiegelen’ in Linux, om nieuwe netwerkfuncties toe te voegen en de compatibiliteit te verbeteren.</em></p>
+<section id="testen-versie-van-windows">
+<h4>Testen versie van windows<a class="headerlink" href="#testen-versie-van-windows" title="Link to this heading"></a></h4>
+<p>Start winver met het run commando in windows:</p>
+<div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="go">winver</span>
+</pre></div>
+</div>
+</section>
+<section id="wsl-in-mirrord-network-mode-zetten">
+<h4>WSL in mirrord network mode zetten<a class="headerlink" href="#wsl-in-mirrord-network-mode-zetten" title="Link to this heading"></a></h4>
+<p>Start notepad met het run commando in windows:</p>
+<p><em>Bevestig als er gevraagd wordt voor het maken van een nieuw bestand</em></p>
+<div class="highlight-doscon notranslate"><div class="highlight"><pre><span></span><span class="go">notepad %userprofile%\.wslconfig</span>
+</pre></div>
+</div>
+<p>Kopieëer onderstaande tekst in Notepad en sla het bestand op.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[wsl2]
+networkingMode=mirrored
+</pre></div>
+</div>
+<p><svg version="1.1" width="2.0em" height="2.0em" class="sd-octicon sd-octicon-alert sd-text-info" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 17.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm-.25-8.25a.75.75 0 0 0-1.5 0v4.5a.75.75 0 0 0 1.5 0v-4.5Z"></path><path d="M9.836 3.244c.963-1.665 3.365-1.665 4.328 0l8.967 15.504c.963 1.667-.24 3.752-2.165 3.752H3.034c-1.926 0-3.128-2.085-2.165-3.752Zm3.03.751a1.002 1.002 0 0 0-1.732 0L2.168 19.499A1.002 1.002 0 0 0 3.034 21h17.932a1.002 1.002 0 0 0 .866-1.5L12.866 3.994Z"></path></svg> Als het bestand al bestaat voeg dan alleen de regel <em>networkingMode=mirrored</em> toe onder de tag <em>[wsl2]</em></p>
+<p>Beëindig alle distributies van wsl (in een Powershell):</p>
+<div class="highlight-powershell notranslate"><div class="highlight"><pre><span></span><span class="n">wsl</span> <span class="p">-</span><span class="n">-shutdown</span>
+</pre></div>
+</div>
+<p>Sluit tevens Visual Code af, als deze geopend is.</p>
+<ul class="simple">
+<li><p>Wacht minimaal 8 seconden voor je WSL start(vanuit powershell) of Visual Code.</p></li>
+</ul>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Voettekst">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welkom bij Avans: Windows Subsystem for Linux Handleiding" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Vorige</a>
+        <a href="WSL_Cheatsheet.html" class="btn btn-neutral float-right" title="WSL Cheatsheet" accesskey="n" rel="next">Volgende <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Avans ATIx: Gerard Harkema.</p>
+  </div>
+
+  Gebouwd met <a href="https://www.sphinx-doc.org/">Sphinx</a> met een
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thema</a>
+    geleverd door <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
